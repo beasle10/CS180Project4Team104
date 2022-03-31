@@ -7,12 +7,12 @@
 public class FileAccessor {
 
     /**
-     * Takes a userName, passWord and userType (true = teacher)
-     * Returns true if userName and passWord are associated with an account of the given type
-     * else returns false
+     * Takes a username, password and userType (true = teacher)
+     * Returns userID if username and password are associated with an account of the given type
+     * Else throws UserNotFoundException
      */
-    public boolean userCheck(String userName, String passWord, boolean userType) {
-        return false;
+    public int userCheck(String username, String password, boolean userType) throws UserNotFoundException {
+        return 0;
     }
 
     /**
@@ -25,12 +25,12 @@ public class FileAccessor {
     }
 
     /**
-     * Takes the quizNum and the studentID
+     * Takes the quizNum and the userID
      * Returns String[] of student answers
      * If quizNum not associated with a quiz throws QuizNotFoundException
-     * If studentID not associated with quiz return null
+     * If userID not associated with quiz return null
      */
-    public String[] getStudentAnswers(int quizNum, int studentID) throws QuizNotFoundException {
+    public String[] getStudentAnswers(int quizNum, int userID) throws QuizNotFoundException, UserNotFoundException {
         return null;
     }
 
@@ -45,12 +45,12 @@ public class FileAccessor {
     }
 
     /**
-     * Takes quizNum and studentID
+     * Takes quizNum and userID
      * Returns double of student grade
      * If quizNum not associated with a quiz throws QuizNotFoundException
-     * If studentID not associated with quiz return -1
+     * If userID not associated with quiz throws UserNotFoundException
      */
-    public double getGrade(int quizNum, int studentID) throws QuizNotFoundException {
-        return -1;
+    public double getGrade(int quizNum, int userID) throws QuizNotFoundException, UserNotFoundException {
+        return 0;
     }
 }
