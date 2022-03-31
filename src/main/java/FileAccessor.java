@@ -28,7 +28,7 @@ public class FileAccessor {
      * Takes the quizNum and the userID
      * Returns String[] of student answers
      * If quizNum not associated with a quiz throws QuizNotFoundException
-     * If userID not associated with quiz return null
+     * If userID not associated with quiz throw UserNotFoundException
      */
     public String[] getStudentAnswers(int quizNum, int userID) throws QuizNotFoundException, UserNotFoundException {
         return null;
