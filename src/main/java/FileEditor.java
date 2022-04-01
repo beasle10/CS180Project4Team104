@@ -2,7 +2,6 @@
  * Class for all File Output
  *  only one should exist
  *
- * @version 3/31/2022
  * @author Aaron Boes
  */
 public class FileEditor {

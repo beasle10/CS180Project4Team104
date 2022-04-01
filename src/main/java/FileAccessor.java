@@ -1,7 +1,6 @@
 /**
  * Class for all File Input
  *
- * @version 3/31/2022
  * @author Aaron Boes
  */
 public class FileAccessor {
@@ -37,11 +36,11 @@ public class FileAccessor {
     }
 
     /**
-     * Return the quizNum corresponding to a quizName.
-     * Throws QuizNotFound Exception if quizName is invalid.
+     * Return the quizNums corresponding to a quizName.
+     * Throws QuizNotFound Exception if quizName is invalid. (none are found)
      */
-    public int getQuizName(String quizName) throws QuizNotFoundException {
-        return 0;
+    public int[] getQuizName(String quizName) throws QuizNotFoundException {
+        return null;
     }
 
     /**

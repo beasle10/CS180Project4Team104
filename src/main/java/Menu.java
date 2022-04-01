@@ -1,9 +1,16 @@
 import java.util.Scanner;
 
+/**
+ * Class for user interaction
+ *
+ * @author Aaron Boes
+ */
+
 public class Menu {
 
     /**
      * General Menu:
+     *
      *      0 - option[0]
      *      1 - option[1]
      *      2 - option[2]
@@ -16,9 +23,8 @@ public class Menu {
      */
     public int optionMenu(String[] options, Scanner scanner) {
         while (true) {
-            System.out.println("What would you like to do");
             for (int i = 0; i < options.length; i++) {
-                System.out.printf("%d - %s", i, options[i]);
+                System.out.printf("%d - %s\n", i, options[i]);
             }
             try {
                 int ret = Integer.parseInt(scanner.nextLine());
