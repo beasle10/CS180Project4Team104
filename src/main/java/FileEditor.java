@@ -6,12 +6,78 @@
  */
 public class FileEditor {
 
+    //File formats:
+    //  UserFile:
+    //      FileName:
+    //          UserFile.txt (only one should exist)
+    //      Format:
+    //          (for each user)
+    //          Username|Password|Type|UserID\n
+    //      Username - the username used to log in
+    //      Password - the password used to log in
+    //      Type - the type of the account, true - teacher, false - student
+    //      UserID - the ID used by the system
+    //
+    //  QuizFile:
+    //      FileName:
+    //          Q[QuizNum].txt
+    //      Format:
+    //          line0:  QuizName|NumQuestions|RandomizationInformation\n
+    //          line1+: QuestionNum|Prompt|Type|TypeInformation\n
+    //      QuizName - name of the quiz
+    //      NumQuestions - number of questions in the quiz (can be thought of as groups)
+    //      RandomizationInformation - information needed for randomization and customization
+    //      QuestionNum - question number that this question has a chance of being
+    //      Prompt - question text
+    //      Type - the type of question
+    //      TypeInformation - the information needed for the type of question
+    //
+    //  QuizAnswerFile:
+    //      FileName:
+    //          QA[QuizNum].txt
+    //      Format:
+    //          UserID|Graded|Answers/n
+    //      UserID - ID of the user who gave the answers
+    //      Graded - true if the Answers have been graded, false if they have not
+    //      Answers - '.' separated list of answers
+    //
+    //  GradeFile:
+    //      FileName:
+    //          G[UserID].txt
+    //      Format:
+    //          QuizNum|Grade/n
+    //      QuizNum - the ID of the quiz graded
+    //      Grade - grade given on quiz
+
+
     /**
      * Takes username, password, and userType
      * Returns false if username is already taken
      * Else returns true
      */
     public boolean createUser(String username, String password, boolean userType) {
+        return true;
+    }
+
+    /**
+     * Takes userID and new username
+     * Returns true if username is changed
+     * Else returns false
+     *
+     * Throws UserNotFoundException if userID does not correspond to an existing user
+     */
+    public boolean changeUsername(int userID, String username) throws UserNotFoundException {
+        return true;
+    }
+
+    /**
+     * Takes userID and new password
+     * Returns true if password is changed
+     * Else returns false
+     *
+     * Throws UserNotFoundException if userID does not correspond to an existing user
+     */
+    public boolean changePassword(int userID, String password) throws UserNotFoundException {
         return true;
     }
 

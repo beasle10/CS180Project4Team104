@@ -19,8 +19,8 @@ public class FileAccessor {
      * Takes quizNum and userType
      *
      * Format:
-     *  String[0]:      QuizName,NumQuestions,RandomizationInformation
-     *  String[1+]:     QuestionNum,Prompt,Type,TypeInformation
+     *  String[0]:      QuizName|NumQuestions|RandomizationInformation
+     *  String[1+]:     QuestionNum|Prompt|Type|TypeInformation
      *
      * If no quiz exists associated with quizNum throws QuizNotFoundException
      */
