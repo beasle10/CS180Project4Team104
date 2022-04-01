@@ -48,6 +48,14 @@ public class FileEditor {
     //          QuizNum|Grade/n
     //      QuizNum - the ID of the quiz graded
     //      Grade - grade given on quiz
+    //
+    //  QuizListFile:
+    //      FileName:
+    //          QuizList.txt (There should only be one)
+    //      Format:
+    //          QuizNum|QuizName
+    //      QuizNum - the ID of the quiz
+    //      QuizName - the name of the quiz
 
 
     /**
