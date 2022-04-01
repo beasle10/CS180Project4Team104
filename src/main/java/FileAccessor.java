@@ -29,6 +29,22 @@ public class FileAccessor {
     }
 
     /**
+     * Return the Name of the quizNum.
+     * Throws QuizNotFound Exception if quizNum is invalid.
+     */
+    public String getQuizName(int quizNum) throws QuizNotFoundException {
+        return null;
+    }
+
+    /**
+     * Return the quizNum corresponding to a quizName.
+     * Throws QuizNotFound Exception if quizName is invalid.
+     */
+    public int getQuizName(String quizName) throws QuizNotFoundException {
+        return 0;
+    }
+
+    /**
      * Takes quizNum and userType
      *
      * Format:

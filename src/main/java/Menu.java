@@ -2,6 +2,18 @@ import java.util.Scanner;
 
 public class Menu {
 
+    /**
+     * General Menu:
+     *      0 - option[0]
+     *      1 - option[1]
+     *      2 - option[2]
+     *      .   .   .   .
+     *      .   .   .   .
+     *      .   .   .   .
+     *
+     * Returns user response.
+     * user response is always valid.
+     */
     public static int optionMenu(String[] options, Scanner scanner) {
         while (true) {
             System.out.println("What would you like to do");
