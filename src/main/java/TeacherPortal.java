@@ -43,6 +43,7 @@ public class TeacherPortal {
      *      2 - Create Quiz
      *      3 - Delete Quiz
      *      4 - Back
+     * Returns false to exit program
      */
     public static boolean quizMenu(int userID, Scanner scan) {
         return true;
@@ -55,6 +56,7 @@ public class TeacherPortal {
      *      2 - Grade Quiz
      *      3 - View Quiz Grade
      *      4 - Back
+     * Returns false to exit program
      */
     public static boolean gradeMenu(int userID, Scanner scan) {
         return true;
@@ -66,6 +68,7 @@ public class TeacherPortal {
      *      1 - Change Username
      *      2 - Change Password
      *      3 - Back
+     * Returns false to exit program
      */
     public static boolean userMenu(int userID, Scanner scan) {
         return true;
