@@ -23,6 +23,8 @@ public class Main {
                 }
                 System.out.println("Please enter Password");
                 String password = scanner.nextLine();
+                System.out.println("Are you 1. Teacher or 2. Student? (Enter 1 or 2)");
+                String teachOrStu = scanner.nextLine();
                 usernames.add(Integer.parseInt(username),password);
             } else if (initialSelection.equals("2")){
 
