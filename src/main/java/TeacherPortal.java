@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 /**
  * Class to handle teachers
+ *
+ * Only one should exist
  */
 
 public class TeacherPortal {
     private static final boolean USER_TYPE = FileAccessor.TEACHER;
+    private static Menu menu = new Menu();
 
     /**
      * The start menu:
@@ -14,10 +17,10 @@ public class TeacherPortal {
      *      2 - User Menu
      *      3 - Quit
      */
-    public static void start(int userID, Scanner scan) {
+    public void start(int userID, Scanner scan) {
         String[] options = new String[]{"Quiz Menu", "Grade Menu", "User Menu", "Quit"};
         while (true) {
-            switch (Menu.optionMenu(options, scan)) {
+            switch (menu.optionMenu(options, scan)) {
                 case 0:
                     if (!quizMenu(userID, scan))
                         return;
@@ -45,7 +48,7 @@ public class TeacherPortal {
      *      4 - Back
      * Returns false to exit program
      */
-    public static boolean quizMenu(int userID, Scanner scan) {
+    public boolean quizMenu(int userID, Scanner scan) {
         return true;
     }
 
@@ -58,7 +61,7 @@ public class TeacherPortal {
      *      4 - Back
      * Returns false to exit program
      */
-    public static boolean gradeMenu(int userID, Scanner scan) {
+    public boolean gradeMenu(int userID, Scanner scan) {
         return true;
     }
 
@@ -70,7 +73,7 @@ public class TeacherPortal {
      *      3 - Back
      * Returns false to exit program
      */
-    public static boolean userMenu(int userID, Scanner scan) {
+    public boolean userMenu(int userID, Scanner scan) {
         return true;
     }
 }

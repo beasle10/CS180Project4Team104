@@ -14,7 +14,7 @@ public class Menu {
      * Returns user response.
      * user response is always valid.
      */
-    public static int optionMenu(String[] options, Scanner scanner) {
+    public int optionMenu(String[] options, Scanner scanner) {
         while (true) {
             System.out.println("What would you like to do");
             for (int i = 0; i < options.length; i++) {
