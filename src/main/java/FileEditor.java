@@ -138,7 +138,7 @@ public class FileEditor {
      * Returns true if addition is successful
      * Returns false if file cannot be written to
      * Throws QuizNotFoundException if quizNum does not correspond to an existing quiz grade
-     * throws UserNotFoundException if userID does not correspond to an existing GradeFile
+     * Throws UserNotFoundException if userID does not correspond to an existing GradeFile
      */
     public boolean modifyGrade(int userID, int quizNum, double grade) throws UserNotFoundException, QuizNotFoundException {
         return true;

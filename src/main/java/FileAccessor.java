@@ -5,6 +5,9 @@
  * @author Aaron Boes
  */
 public class FileAccessor {
+    // UserType named variables
+    public static final boolean TEACHER = true;
+    public static final boolean STUDENT = false;
 
     /**
      * Takes a username, password and userType (true = teacher)
@@ -13,6 +16,16 @@ public class FileAccessor {
      */
     public int userCheck(String username, String password, boolean userType) throws UserNotFoundException {
         return 0;
+    }
+
+    /**
+     * Return a list of every quiz
+     *
+     * Format:
+     *      QuizName|QuizNum
+     */
+    public String[] getQuizList() {
+        return null;
     }
 
     /**
