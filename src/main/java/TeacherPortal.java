@@ -76,8 +76,18 @@ public class TeacherPortal {
         }
     }
 
+    /**
+     * QuizView:
+     *      quizSearcher
+     *      quiz.view
+     *      0 - View Another Quiz
+     *      1 - Modify Quiz
+     *      2 - Delete Quiz
+     *      3 - Back
+     *
+     */
     public void quizView(int userID, Scanner scan) {
-        String[] options = new String[]{"view Another Quiz", "Modify Quiz", "Delete Quiz", "back"};
+        String[] options = new String[]{"view Another Quiz", "Modify Quiz", "Delete Quiz", "Back"};
         Quiz quiz = quizSearcher(userID, scan);
         // quiz.view
         while (true) {
@@ -86,10 +96,113 @@ public class TeacherPortal {
                     quiz = quizSearcher(userID, scan);
                     // quiz.view
                 case 1:
-                    modifyMenu(quiz);
+                    quizModifyMenu(quiz);
                     break;
+                case 2:
+                    quizDeleteMenu(quiz);
+                    break;
+                case 3:
+                    return;
             }
         }
+    }
+
+    /**
+     * QuizModify:
+     *      quizSearch
+     *      quizModifyMenu
+     *      0 - Modify Another Quiz
+     *      1 - Back
+     */
+    public void quizModify(int userID, Scanner scan) {
+        String[] options = new String[]{"Modify Another Quiz", "Back"};
+        quizModifyMenu(quizSearcher(userID, scan));
+        while (true) {
+            switch (menu.optionMenu(options, scan)) {
+                case 0:
+                    quizModifyMenu(quizSearcher(userID, scan));
+                    break;
+                case 1:
+                    return;
+            }
+        }
+    }
+
+    /**
+     * QuizModifyMenu:
+     *      TODO
+     *
+     */
+    public void quizModifyMenu(Quiz quiz) {
+
+    }
+
+    /**
+     * QuizCreate:
+     *      0 - Use QuizFile
+     *      1 - Create new Quiz
+     *      2 - Back
+     */
+    public void quizCreate(int unitID, Scanner scan) {
+        String[] options = new String[]{"Use QuizFile", "Create new Quiz", "Back"};
+        String[] options2 = new String[]{"Create another Quiz", "Back"};
+        while (true) {
+            switch (menu.optionMenu(options, scan)) {
+                case 0:
+                    quizCreateFile(scan);
+                    break;
+                case 1:
+                    quizCreateNew(scan);
+                    break;
+                case 2:
+                    return;
+            }
+            switch (menu.optionMenu(options2, scan)) {
+                case 0:
+                    break;
+                case 1:
+                    return;
+            }
+        }
+    }
+
+    public void quizCreateFile(Scanner scan) {
+
+    }
+
+    public void quizCreateNew(Scanner scan) {
+
+    }
+
+    /**
+     * QuizDelete:
+     *      quizSearcher
+     *      quizDeleteMenu
+     *      0 - Delete Another Quiz
+     *      1 - Back
+     *
+     */
+    public void quizDelete(int userID, Scanner scan) {
+        String[] options = new String[]{"Delete Another Quiz", "Back"};
+        quizDeleteMenu(quizSearcher(userID, scan));
+        while (true) {
+            switch (menu.optionMenu(options, scan)) {
+                case 0:
+                    quizModifyMenu(quizSearcher(userID, scan));
+                    break;
+                case 1:
+                    return;
+            }
+        }
+    }
+
+    /**
+     * QuizDeleteMenu:
+     *      TODO
+     *
+     */
+    public void quizDeleteMenu(Quiz quiz) {
+        
     }
 
     /**
