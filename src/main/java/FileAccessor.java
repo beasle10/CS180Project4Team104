@@ -17,7 +17,11 @@ public class FileAccessor {
 
     /**
      * Takes quizNum and userType
-     * Returns String[] of quiz questions, with answers if userType == true (teacher)
+     *
+     * Format:
+     *  String[0]:      QuizName,NumQuestions,RandomizationInformation
+     *  String[1+]:     QuestionNum,Prompt,Type,TypeInformation
+     *
      * If no quiz exists associated with quizNum throws QuizNotFoundException
      */
     public String[] getQuiz(int quizNum, boolean userType) throws QuizNotFoundException {
@@ -36,7 +40,10 @@ public class FileAccessor {
 
     /**
      * Takes the quizNum
-     * Returns String[][] of student answers, Format: String[Student][Answers]
+     * Returns String[][] of student answers,
+     *
+     *      Format: String[Student][Answers]
+     *
      * If quizNum not associated with a quiz throws QuizNotFoundException
      * If no students associated with quiz return null
      */
